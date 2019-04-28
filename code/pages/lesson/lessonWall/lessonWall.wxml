@@ -1,0 +1,91 @@
+<!--pages/lesson/lessonWall/lessonWall.wxml-->
+<view>
+  <view class='container'>
+    <!-- 学生代表 -->
+    <view class='delegate-layout'>
+      <!-- 男生 -->
+      <view class='delegate-card' hover="true" hover-class="layout-hover" bindtap='clickBoy'>
+        <image class='delegate-card-image' src='{{boy.avatar || userDefault.avatar}}' mode='aspectFill'></image>
+        <image class='delegate-gender' src='/assets/img/ic_delegate_gender_boy.png' ></image>
+        <view class='delegate-info'>
+          <view class='delegate-info-line'>
+            <image class='delegate-info-line-image' src='/assets/img/bg_prepare_stu_info.png'></image>
+            <view class='delegate-info-line-text'>
+              <text class='delegate-no'>{{boy.no}} / </text>
+              <text class='delegate-name'>{{boy.nickname}}</text>
+              <text class='delegate-hr'>{{boy.bpm}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <!-- 女生 -->
+      <view class='delegate-card' hover="true" hover-class="layout-hover" bindtap='clickGirl'>
+        <image class='delegate-card-image' src='{{girl.avatar || userDefault.avatar}}' mode='aspectFill'></image>
+        <image class='delegate-gender' src='/assets/img/ic_delegate_gender_girl.png' ></image>
+        <view class='delegate-info'>
+          <view class='delegate-info-line'>
+            <image class='delegate-info-line-image' src='/assets/img/bg_prepare_stu_info.png'></image>
+            <view class='delegate-info-line-text'>
+              <text class='delegate-no'>{{girl.no}} / </text>
+              <text class='delegate-name'>{{girl.nickname}}</text>
+              <text class='delegate-hr'>{{girl.bpm}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class='list'>
+      <block wx:for="{{students}}"  wx:key="id">
+        <template is="studentsView" data="{{item}}"/>
+      </block>
+    </view>
+
+    <view class='.botoom-logo-view'>
+      <image class='.bottom-logo-image' src='/assets/img/ic_logo_bottom.png'></image>
+    </view>
+    <view class='.bottom-blank'></view>
+    
+  </view>
+  <!-- 报警 -->
+  <view wx:if='{{warningSize != 0}}' class='warning'>
+    <image class='warning-icon' src='/assets/img/ic_warning.png'></image>
+    <text class='warning-text'>{{warningTx}}</text>
+  </view>
+
+  <view class='bottom-view'>
+    <!-- <text class='button-clazz' bindtap='clickLostData'>丢包数据</text> -->
+    <text wx:if='{{status == 1}}' class='button-clazz' hover="true" hover-class="layout-hover"  bindtap='closeClass'>取消上课</text>
+    <text wx:else class='button-clazz' hover="true" hover-class="layout-hover"  bindtap='clickclassDetail'>班级一览</text>
+    <text wx:if='{{status == 1}}' class='button-action' hover="true" hover-class="layout-hover"  bindtap='startLesson'>开始上课</text>
+    <text wx:else class='button-action' hover="true" hover-class="layout-hover"  bindtap='finishLesson'>结束上课</text>
+  </view>
+
+
+  <template name="studentsView">
+    <view class='item' hover="true" hover-class="layout-hover" bindtap='clickstudentsItem'data-obj="{{item}}">
+      <image class='item-image' src="/assets/img/bg_item_list_lessons.png"></image>
+      <!-- 布局 -->
+      <view class='item-row'>
+        <view class='avatar-base'>
+          <image class='avatar-bg' src='/assets/img/bg_avatar_round.png'></image>
+          <image class='avatar' src='{{item.avatar || userDefault.avatar}}'></image> 
+        </view>
+        <view class='item-info'>
+          <view class='item-line'>
+            <text class='item-no'>{{item.no}}</text>
+            <text class='item-name'> / {{item.nickname}}</text>
+          </view>
+          <view class='item-line'>
+            <text class='item-hr-name'>当前心率</text>
+            <text wx:if='{{item.bpm < item.target_hr}}' class='item-hr-value tx-bpm-low'>{{item.bpm}}</text>
+            <text wx:elif='{{item.bpm < item.target_hr_high}}' class='item-hr-value tx-bpm-target'>{{item.bpm}}</text>
+            <text wx:else class='item-hr-value tx-bpm-high'>{{item.bpm}}</text>
+          </view>
+        </view>
+        <image class='item-look' src='/assets/img/ic_detail.png'></image>
+      </view>
+    </view>
+  </template>
+</view>

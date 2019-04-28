@@ -1,0 +1,174 @@
+.tab-scroll {
+    width: 640rpx;
+    background-color: #ffffff;
+    white-space: nowrap;
+    padding-left: 40rpx;
+    padding-right: 120rpx;
+}
+
+.tab{
+	display: flex;
+	flex-direction: column;
+}
+
+.tab-nav{
+	height: 80rpx;
+	border-bottom: 0.5rpx dotted #ddd;
+	display: flex;
+	line-height: 79rpx;
+	position: relative;
+  font-size:12px;
+}
+
+.tab-content{
+  min-width:20%;
+  max-width:20%;
+  text-align:center;
+  height: 80rpx;
+}
+
+.all{
+  position: absolute;
+  width: 104rpx;
+  height: 78rpx;
+  right: 0;
+  line-height: 78rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #333333;
+  background: #ffffff;
+}
+
+/**
+去除横向滚动条
+*/
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+
+.tab-line{
+	position: absolute;
+	left: 0;
+	bottom: -1rpx;
+	height: 4rpx;
+	background: #f7982a;
+	transition: all 0.3s;
+}
+
+.card{
+  background-color: #fff;
+  border-radius: 30rpx;
+  width: 694rpx;
+  margin-top: 30rpx;
+}
+
+.card-summary{
+  height: 302rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-summary .line{
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-between;
+}
+
+.card-summary .line .item{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+  align-items: center;
+}
+
+.card-summary .line .divider{
+  height: 100rpx;
+  width: 1rpx;
+  background: #e0e0e0;
+}
+
+.card-summary .line .item .value{
+  color: #ff4613;
+  font-size: 46rpx;
+}
+
+.card-summary .line .item .tag{
+  color: #666666;
+  font-size: 22rpx;
+  margin-top: 2rpx;
+}
+
+.card-chart{
+  height: 402rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-chart .title{
+  width: 100%;
+  height: 54rpx;
+  margin-top: 40rpx;
+  margin-left: 32rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.card-chart .title .sign{
+  background-color: #ff4612;
+  width: 6rpx;
+  height: 30rpx;
+  border-radius: 3rpx;
+}
+
+.card-chart .title .tx{
+  font-size: 28rpx;
+  color: #222222;
+  margin-left: 20rpx;
+  flex: 1;
+}
+
+.card-chart .title .legend{
+  width: 121rpx;
+  height: 54rpx;
+  margin-right: 60rpx;
+}
+
+.card-chart .chart-chart{
+  flex-grow: 1;
+  width: 100%;
+}
+
+.card-chart .chart-container{
+  position: absolute;
+  height: 330rpx;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.ec-canvas-power {
+  position: absolute;
+  width: 694rpx;
+  height: 320rpx;
+  top: 530rpx;
+}
+
+.ec-canvas-hr {
+  position: absolute;
+  width: 694rpx;
+  height: 410rpx;
+  top: 920rpx;
+}

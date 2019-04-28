@@ -1,0 +1,100 @@
+/* pages/lesson/tab/tab.wxss */
+.item{
+  width: 100%;
+  height: 213rpx;
+  display: block;
+}
+
+.item-image{
+  position: absolute;
+  width: 100%;
+  height: 213rpx;
+}
+
+.item-row{
+  position: absolute;
+  width: 100%;
+  height: 213rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+}
+
+.item-row-left{
+  flex-grow: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  box-sizing: border-box;
+  padding-left: 60rpx;
+}
+
+.item-row-right{
+  width: 200rpx;
+  height: 100%;
+  display: flex;
+  margin-right: 30rpx;
+  flex-direction: column;
+  justify-content:center;
+}
+
+.lesson-info{
+  display: flex;
+  flex-direction: row;
+}
+
+.lesson-info-name{
+  color: #222222;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.lesson-info-state{
+  color: #f2612f;
+  font-size: 24rpx;
+  border-color: #f2612f;
+  border-radius: 8rpx;
+  border-width: 3rpx;
+  border-style: solid;
+  margin-left: 20rpx;
+  padding-left: 15rpx;
+  padding-right: 15rpx;
+  padding-top: 4rpx;
+  padding-bottom: 4rpx;
+}
+
+.lesson-time{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20rpx;
+}
+
+.lesson-time-icon{
+  width: 28rpx;
+  height: 30rpx;
+}
+
+.lesson-time-text{
+  font-size: 24rpx;
+  color: #cccccc;
+  margin-left: 10rpx;
+}
+
+.lesson-action{
+  width: 152rpx;
+  color: #fff;
+  border-radius: 25rpx;
+  font-size: 28rpx;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 12rpx;
+  padding-bottom: 12rpx;
+}
+
+.action-on{
+  background: #ff4612;
+}
+
+.action-off{
+  background: #cccccc;
+}

@@ -1,0 +1,31 @@
+<!--pages/report/tab/tab.wxml-->
+<view class="container">
+  <view class='list'>
+      <block wx:for="{{reports}}"  wx:key="id">
+        <template is="reportsView" data="{{item}}"/>
+      </block>
+  </view>
+
+  <template name="reportsView">
+    <view class="item" bindtap='clickReportItem' hover="true" hover-class="layout-hover" data-obj="{{item}}">
+      <image class='item-image' src="/assets/img/bg_item_list_lessons.png"></image>
+      <!-- 布局 -->
+      <view class='item-row'>
+        <view class='item-row-left'>
+          <view class='lesson-info'>
+            <!-- 班级名称 -->
+            <text class='lesson-info-name'>{{item.classname}}</text>
+          </view>
+          <text class='lesson-info-teacher'>({{item.teachername}})</text>
+          <!-- 上课时间 -->
+          <view class='lesson-time'>
+            <image class='lesson-time-icon' src='/assets/img/ic_lesson_starttime.png'></image>
+            <text class='lesson-time-text'>上课时间:{{item.startformattime}} </text>
+          </view>
+          
+        </view>
+        <text class='item-look'>查看详情</text>
+      </view>
+    </view>
+  </template>
+</view>

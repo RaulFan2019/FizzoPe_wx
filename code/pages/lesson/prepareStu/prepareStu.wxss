@@ -1,0 +1,70 @@
+/* pages/lesson/prepareStu/prepareStu.wxss */
+.list-stu{
+  width: 718rpx;
+}
+
+.item{
+  width: 323rpx;
+  height: 238rpx;
+  display: block;
+  margin: 16rpx;
+}
+
+.item-image{
+  position: absolute;
+  width: 323rpx;
+  height: 238rpx;
+  border-top-left-radius: 25rpx;
+  border-top-right-radius: 25rpx;
+}
+
+.item-info{
+  position: absolute;
+  width: 323rpx;
+  height: 238rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-end; 
+}
+
+.item-info-line{
+  width: 100%;
+  height: 62rpx;
+}
+
+.item-info-line-image{
+  position: absolute;
+  width: 100%;
+  height: 62rpx;
+}
+
+.item-info-line-text{
+  position: absolute;
+  width: 100%;
+  height: 62rpx;
+  flex-direction: row;
+  display: flex;
+  align-items:center;
+}
+
+.info-no{
+  color: white;
+  font-size: 24rpx;
+  margin-left: 20rpx;
+}
+
+.info-name{
+  color: white;
+  font-size: 28rpx;
+  flex-grow: 1;
+  margin-left: 16rpx;
+}
+
+.icon-arrow{
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.button-margin{
+  margin-top: 60rpx;
+}

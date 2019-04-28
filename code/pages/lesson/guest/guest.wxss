@@ -1,0 +1,44 @@
+/* pages/lesson/guest/guest.wxss */
+
+.imgae-guest {
+  width: 750rpx;
+  height: 1206rpx;
+}
+
+.image-view {
+  width: 750rpx;
+  height: 1206rpx;
+  background-color: #666;
+}
+
+.input-line {
+  height: 118rpx;
+  margin-top: 165rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.input-code-view {
+  width: 460rpx;
+  height: 120rpx;
+  border: 1px solid #ff4612;
+  border-radius: 4px;
+}
+
+.input-code {
+  height: 120rpx;
+  line-height: 120rpx;
+  font-size: 32rpx;
+  margin-left: 20rpx;
+}
+
+.input-btn {
+  width: 150rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  text-align: center;
+  background-color: #ff4612;
+  border-radius: 4rpx;
+  margin-left: 20rpx;
+  color: #fff;
+}

@@ -1,0 +1,34 @@
+.ic-logo {
+  width: 247rpx;
+  height: 130rpx;
+  margin-top: 440rpx;
+}
+
+.btn-auth {
+  margin-top: 200rpx;
+  width: 690rpx;
+  height: 100rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 36rpx;
+  background-color: #ff4612;
+  border-radius: 50rpx;
+  box-shadow: 0rpx,0rpx,25rpx,25rpx,black;
+}
+
+.btn-hover {
+  opacity: 0.9;
+  transform: scale(0.95, 0.95);
+}
+
+.tx-tip {
+  color: #ccc;
+  font-size: 28rpx;
+  margin-top: 280rpx;
+}
+
+.tx-ver{
+  color: #ccc;
+  font-size: 28rpx;
+  margin-top: 10rpx;
+}

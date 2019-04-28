@@ -1,0 +1,20 @@
+.logo{
+  width: 247rpx;
+  height: 130rpx;
+  margin-top: 440rpx;
+}
+
+.launch-tip{
+  color: #cccccc;
+  font-size: 28rpx;
+  margin-top: 280rpx;
+}
+
+.launch-ver{
+  color: #cccccc;
+  font-size: 28rpx;
+}
+
+.launch-btn{
+  margin-top: 200rpx;
+}

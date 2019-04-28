@@ -1,0 +1,217 @@
+/* pages/lesson/stuDetail/stuDetail.wxss */
+ec-canvas {
+  width: 694rpx;
+  height: 460rpx;
+  margin-top: 220rpx;
+}
+
+.card{
+  background-color: #fff;
+  border-radius: 30rpx;
+  width: 694rpx;
+  margin-top: 30rpx;
+}
+
+/* 个人基本数据 */
+.card-stu-info{
+  height: 134rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* 头像 */
+.stu-avatar{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+  margin-left: 30rpx;
+}
+
+.avatar-base{
+  width: 120rpx;
+  height: 120rpx;
+  margin-left: 30rpx;
+}
+
+.avatar-bg{
+  width: 120rpx;
+  height: 120rpx;
+  position: absolute;
+}
+
+.avatar{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+  position: absolute;
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+}
+
+ /* 学生信息 */
+.stu-info{
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 38rpx;
+  justify-content: space-around;
+}
+
+.stu-info-line{
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.info-name{
+  font-size: 28rpx;
+  color: #666666;
+}
+
+.info-Value{
+  font-size: 32rpx;
+  color: #222222;
+  font-weight: bold;
+}
+
+.info-split{
+  font-size: 24rpx;
+  color: #666666;
+  margin-left: 4rpx;
+  margin-right: 4rpx;
+}
+
+.stu-curr-hr{
+  width: 186rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.info-bottom-margin{
+  margin-top: 12rpx;
+}
+
+.card-chart{
+  height: 560rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-title{
+  display: flex;
+  flex-direction: row;
+  margin-top: 40rpx;
+  margin-left: 32rpx;
+}
+
+.chart-title-icon{
+  background-color: #ff4612;
+  width: 6rpx;
+  height: 30rpx;
+  border-radius: 3rpx;
+}
+
+.chart-title-text{
+  font-size: 28rpx;
+  color: #222222;
+  margin-left: 20rpx;
+}
+
+.chart-chart{
+  flex-grow: 1;
+  width: 100%;
+}
+
+.chart-container{
+  position: absolute;
+  height: 330rpx;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.chart-bottom-view{
+  height: 138rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.chart-block{
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.chart-block-value{
+  color: #222222;
+  font-size: 46rpx;
+}
+
+.chart-block-name{
+  color: #666666;
+  font-size: 24rpx;
+}
+
+/* 说明文字 */
+.text-tip{
+  color: #666666;
+  font-size: 24rpx;
+}
+
+/* 运动区间 **/
+.card-sport{
+  height: 136rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.sport-block{
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sport-divider{
+  background-color: #666666;
+  width: 1rpx;
+  height: 78rpx;
+}
+
+.sport-block-value-line{
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.sport-block-value{
+  font-size: 46rpx;
+  color: #ff4612;
+}
+
+.sport-block-per{
+  font-size: 24rpx;
+  color: #ff4612;
+}
+
+.sport-block-name{
+  font-size: 24rpx;
+  color: #666666;
+}
+
+.button-margin{
+  margin-top: 60rpx;
+}

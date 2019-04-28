@@ -1,0 +1,9 @@
+<view class='container'>
+  <image class='ic-logo' src="/assets/img/ic_logo.png"></image>
+
+  <button class="btn-auth" wx:if="{{!hasUserInfo || !canIUse}}" open-type="getUserInfo"
+  hover="true" hover-class="btn-hover" 
+  bindgetuserinfo="userInfoHandler">授权登录</button>
+  <view wx:else class='tx-tip'>{{tip}}</view>
+  <view class='tx-ver'>Ver2.0.6</view>
+</view>

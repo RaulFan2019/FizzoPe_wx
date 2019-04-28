@@ -1,0 +1,32 @@
+<!--pages/lesson/stuTimer/stuTimer.wxml-->
+<view class='container'>
+  <view class='card card-title'>
+    <view class='avatar-base'>
+        <image class='avatar-bg' src='/assets/img/bg_avatar_round.png'></image>
+        <image class='avatar' src='{{avatar || userDefault.avatar}}'></image> 
+    </view>
+    <text class='stu-no'>{{no}}</text>
+    <text class='stu-per'>/</text>
+    <text class='stu-name'>{{nickName}}</text>
+  </view>
+
+  <view class='card card-timer'>
+    <view class='timer-line'>
+      <text class='timer-timer'>{{displayTime}}</text>
+      <text class='timer-tip'>运动时间</text>
+    </view>
+
+    <view class='timer-line'>
+      <view wx:if='{{showStart}}' class='button'  bindtap='onStartHandler'>
+        <image class='button-icon' src='/assets/img/ic_start.png'></image>
+      </view>
+      <view wx:else class='button' bindtap='onStopHandler'>
+        <image class='button-icon' src='/assets/img/ic_stop.png'></image>
+      </view>
+    </view>
+  </view>
+
+  <view class='.botoom-logo-view'>
+    <image class='.bottom-logo-image' src='/assets/img/ic_logo_bottom.png'></image>
+  </view>
+</view>

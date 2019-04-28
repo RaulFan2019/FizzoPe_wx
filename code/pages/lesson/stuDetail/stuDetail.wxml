@@ -1,0 +1,80 @@
+<!--pages/lesson/stuDetail/stuDetail.wxml-->
+<view class='container'>
+  <!-- 个人基本数据 -->
+  <view class='card card-stu-info'>
+    <view class='avatar-base'>
+      <image class='avatar-bg' src='/assets/img/bg_avatar_round.png'></image>
+      <image class='avatar' src='{{avatar || userDefault.avatar}}'></image>
+    </view>
+    <view class='stu-info'>
+      <view class='stu-info-line'>
+        <text class='info-name'>{{no}}</text>
+        <text class='info-split'>/</text>
+        <text class='info-Value'>{{nickName}}</text>
+      </view>
+      <view class='stu-info-line info-bottom-margin'>
+        <text class='info-name'>BMI</text>
+        <text class='info-split'>/</text>
+        <text class='info-Value'>{{bmi}}</text>
+      </view>
+    </view>
+    <view class='stu-curr-hr'>
+      <text class='info-Value'>{{currHr}}</text>
+      <text class='info-name info-bottom-margin'>实时心率</text>
+      <text></text>
+    </view>
+  </view>
+
+  <!-- 图表页面 -->
+  <view class='card card-chart'>
+    <view class='chart-title'>
+      <view class='chart-title-icon'></view>
+      <text class='chart-title-text'>个人心率趋势图</text>
+    </view>
+
+    <view class='chart-chart'>
+      <view class='chart-container'>
+        <ec-canvas class='ec-canvas' id="mychart-dom-line" canvas-id="mychart-line" ec="{{ec}}"></ec-canvas>
+      </view>
+    </view>
+    <view class='chart-bottom-view'>
+      <view class='.chart-block'>
+        <text class='chart-block-value'>{{restHr}}</text>
+        <text class='chart-block-name'>静息心率</text>
+      </view>
+      <view class='.chart-block'>
+        <text class='chart-block-value'>{{maxHr}}</text>
+        <text class='chart-block-name'>最高心率</text>
+      </view>
+      <view class='.chart-block'>
+        <text class='chart-block-value'>{{avgHr}}</text>
+        <text class='chart-block-name'>平均心率</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 运动数据 -->
+  <view class='card card-sport'>
+    <view class='sport-block'>
+      <view class='sport-block-value-line'>
+        <text class='sport-block-value'>{{power}}</text>
+      </view>
+      <text class='sport-block-name'>平均强度</text>
+    </view>
+    <view class='sport-divider'></view>
+    <view class='sport-block'>
+      <view class='sport-block-value-line'>
+        <text class='sport-block-value'>{{density}}</text>
+        <text class='sport-block-per'>%</text>
+      </view>
+      <text class='sport-block-name'>平均密度</text>
+    </view>
+  </view>
+
+  <btn-big class="button-margin" confirmText="计时器" bind:confirmEvent="onTimerBtnClick"></btn-big>
+
+  <view class='.botoom-logo-view'>
+    <image class='.bottom-logo-image' src='/assets/img/ic_logo_bottom.png'></image>
+  </view>
+
+</view>

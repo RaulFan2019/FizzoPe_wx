@@ -1,0 +1,80 @@
+<!--pages/lesson/prepare/prepare.wxml-->
+<view class='container'>
+  <!-- 运动场所 -->
+  <view wx:if="{{consoleGroups.length != 1}}" class='prepare-card' hover="true" hover-class="layout-hover" bindtap='selectConsoleGroup'>
+    <image class='prepare-card-img' src='/assets/img/bg_lesson_prepare_card.png'></image>
+    <view class='prepare-card-row'>
+      <text class='text-normal prepare-card-row-name'>运动场所</text>
+      <text wx:if='{{consoleGroup == null}}' class='prepare-card-row-value value-null'>请选择</text>
+      <text wx:else class='text-normal prepare-card-row-value'>{{consoleGroup.name}}</text>
+      <image class='prepare-card-row-icon' hidden='{{consoleGroup != null}}' src='/assets/img/ic_arrow.png'></image>
+    </view>
+  </view>
+
+  <!-- 手环包 -->
+  <view class='prepare-card' hover="true" hover-class="layout-hover" bindtap='selectHrPackage'>
+    <image class='prepare-card-img' src='/assets/img/bg_lesson_prepare_card.png'></image>
+    <view class='prepare-card-row'>
+      <text class='text-normal prepare-card-row-name'>手环包</text>
+      <text wx:if='{{hrPackage == null}}' class='prepare-card-row-value value-null'>请选择</text>
+      <text wx:else class='text-normal prepare-card-row-value'>{{hrPackage.name}}</text>
+      <image class='prepare-card-row-icon' hidden='{{hrPackage != null}}' src='/assets/img/ic_arrow.png'></image>
+    </view>
+  </view>
+
+  <!-- 男生代表 -->
+  <view class='prepare-card' hover="true" hover-class="layout-hover" bindtap='selectBoy'>
+    <image class='prepare-card-img' src='/assets/img/bg_lesson_prepare_card.png'></image>
+    <view class='prepare-card-row'>
+      <text class='text-normal prepare-card-row-name'>1号代表</text>
+      <text wx:if='{{boy == null}}' class='prepare-card-row-value value-null'>请选择</text>
+      <view wx:else class='value-stu'>
+
+        <view class='avatar-base'>
+          <image class='avatar-bg' src='/assets/img/bg_avatar_round.png'></image>
+          <image class='avatar' src='{{boy.avatar || userDefault.avatar}}'></image> 
+        </view>
+    
+        <text wx:if="{{boy.studentnumber < 10}}" class='text-normal'>00{{boy.studentnumber}} / {{boy.nickname}}</text>
+        <text wx:elif="{{boy.studentnumber < 100}}" class='text-normal'>0{{boy.studentnumber}} / {{boy.nickname}}</text>
+        <text wx:else class='text-normal'>0{{boy.studentnumber}} / {{boy.nickname}}</text>
+      </view>
+      <image class='prepare-card-row-icon' hidden='{{boy != null}}' src='/assets/img/ic_arrow.png'></image>
+    </view>
+  </view>
+
+  <!-- 女生代表 -->
+  <view class='prepare-card' hover="true" hover-class="layout-hover" bindtap='selectGirl'>
+    <image class='prepare-card-img' src='/assets/img/bg_lesson_prepare_card.png'></image>
+    <view class='prepare-card-row'>
+      <text class='text-normal prepare-card-row-name'>2号代表</text>
+      <text wx:if='{{girl == null}}' class='prepare-card-row-value value-null'>请选择</text>
+      <view wx:else class='value-stu'>
+        <view class='avatar-base'>
+          <image class='avatar-bg' src='/assets/img/bg_avatar_round.png'></image>
+          <image class='avatar' src='{{girl.avatar || userDefault.avatar}}'></image> 
+        </view>
+        <text wx:if="{{girl.studentnumber < 10}}" class='text-normal'>00{{girl.studentnumber}} / {{girl.nickname}}</text>
+        <text wx:elif="{{girl.studentnumber < 100}}" class='text-normal'>0{{girl.studentnumber}} / {{girl.nickname}}</text>
+        <text wx:else class='text-normal'>0{{girl.studentnumber}} / {{girl.nickname}}</text>
+      </view>
+      <image class='prepare-card-row-icon' hidden='{{girl != null}}' src='/assets/img/ic_arrow.png'></image>
+    </view>
+  </view>
+  <!-- 上课时长 -->
+  <view class='prepare-card' hover="true" hover-class="layout-hover" bindtap='selectDuration'>
+    <image class='prepare-card-img' src='/assets/img/bg_lesson_prepare_card.png'></image>
+    <view class='prepare-card-row'>
+      <text class='text-normal prepare-card-row-name'>上课时长</text>
+      <text wx:if='{{selectedDuration == null}}' class='prepare-card-row-value value-null'>请选择</text>
+      <text wx:else class='text-normal prepare-card-row-value'>{{selectedDuration.duration/60}}分钟</text>
+      <image class='prepare-card-row-icon' hidden='{{duration != 0}}' src='/assets/img/ic_arrow.png'></image>
+    </view>
+  </view>
+
+  <btn-big class="button-margin" confirmText="完成" bind:confirmEvent="onFinishBtnClick"></btn-big>
+
+  <view class='.botoom-logo-view'>
+    <image class='.bottom-logo-image' src='/assets/img/ic_logo_bottom.png'></image>
+  </view>
+</view>

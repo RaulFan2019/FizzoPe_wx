@@ -1,0 +1,103 @@
+<!--pages/lesson/prepareConsoleGroup/prepareConsoleGroup.wxml-->
+<view class="container">
+  <view class='list'>
+      <block wx:for="{{consoleGroups}}"  wx:key="id">
+        <template is="gourpsView" data="{{item}}"/>
+      </block>
+  </view>
+
+  <btn-big class="button-margin" confirmText="完成" bind:confirmEvent="onFinishBtnClick"></btn-big>
+
+  <!-- 小贴士 -->
+  <view class='tip-title'>
+    <image class='tip-title-icon' src='/assets/img/ic_tip.png'></image>
+    <text class='tip-title-text'>大屏幕教学小贴士</text>
+  </view>
+  <text class='tip-msg'>亲爱的老师们,没有预约到大屏幕教学,也可以通过小程
+序功能“班级一览”查看学员心率哟～</text>
+
+  <view class='.botoom-logo-view'>
+    <image class='.bottom-logo-image' src='/assets/img/ic_logo_bottom.png'></image>
+  </view>
+
+   <!-- <template name="consoleGroupsView">
+    <view class="item" bindtap='clickItem'data-obj="{{item}}">
+      <image class='item-image' src="/assets/img/bg_item_list_consolegroup.png"></image>
+      <view class='item-row'>
+        <view class='item-row-top'>
+          <text class='item-name'>运动场所：{{item.name}}</text>
+          <image wx:if="{{item.selected}}" class='icon-arrow' src='/assets/img/ic_selected.png'></image>
+          <image wx:if="{{!item.selected}}" class='icon-arrow' src='/assets/img/ic_un_selected.png'></image>
+        </view>
+        <view class='item-row-bottom'>
+          <view class='item-screen'>
+            <image wx:if="{{item.concurrent_pelesson_count > 0 && item.lessons.length == 0}}" class ='sreen-image' src='/assets/img/ic_consolegroup_rest.png'></image>
+            <image wx:if="{{item.concurrent_pelesson_count > 0 && item.lessons.length > 0}}" class ='sreen-image' src='/assets/img/ic_consolegroup_used.png'></image>
+            <view wx:if="{{item.concurrent_pelesson_count > 0 && item.lessons.length > 0}}" class='screen-info'>
+              <view class='info-line'>
+                <image class='icon-teacher' src='/assets/img/ic_consolegroup_teacher.png'></image>
+                <text class='info-line-text'>{{item.lessons[0].teachername}}</text>
+              </view>
+              <view class='info-line'>
+                <image class='icon-teacher' src='/assets/img/ic_consolegroup_clazz.png'></image>
+                <text class='info-line-text'>{{item.lessons[0].classname}}</text>
+              </view>
+            </view>
+          </view>
+          <view class='item-screen'>
+            <image wx:if="{{item.concurrent_pelesson_count > 1 && item.lessons.length == 1}}" class ='sreen-image' src='/assets/img/ic_consolegroup_rest.png'></image>
+            <image wx:if="{{item.concurrent_pelesson_count > 1 && item.lessons.length > 1}}" class ='sreen-image' src='/assets/img/ic_consolegroup_used.png'></image>
+            <view wx:if="{{item.concurrent_pelesson_count > 1 && item.lessons.length > 1}}" class='screen-info'>
+              <view class='info-line'>
+                <image class='icon-teacher' src='/assets/img/ic_consolegroup_teacher.png'></image>
+                <text class='info-line-text'>{{item.lessons[1].teachername}}</text>
+              </view>
+              <view class='info-line'>
+                <image class='icon-teacher' src='/assets/img/ic_consolegroup_clazz.png'></image>
+                <text class='info-line-text'>{{item.lessons[1].classname}}</text>
+              </view>
+            </view>
+          </view>
+          <view wx:if="{{item.lessons.length > item.concurrent_pelesson_count}}" class='item-screen'>
+            <image class ='sreen-image' src='/assets/img/ic_consolegroup_more.png'></image>
+            <view class='more-info'>
+              <view class='more-line'>
+                <text class='more-number'>{{item.lessons.length - item.concurrent_pelesson_count}}</text>
+                <text class='more-text'> 个 </text>
+              </view>
+              <text class='more-text'>等待大屏幕教学..</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </template>  -->
+
+  <template name='gourpsView'>
+    <view class="item" hover="true" hover-class="layout-hover" bindtap='clickItem'data-obj="{{item}}">
+      <image class='item-image' src="/assets/img/bg_item_list_consolegroup.png"></image>
+      <view class='item-row'>
+        <!-- 名称，选择状态 -->
+        <view class='item-row-top'>
+          <text class='item-name'>运动场所：{{item.name}}</text>
+          <image wx:if="{{item.selected}}" class='icon-arrow' src='/assets/img/ic_selected.png'></image>
+          <image wx:if="{{!item.selected}}" class='icon-arrow' src='/assets/img/ic_un_selected.png'></image>
+        </view>
+        <!-- 分割线 -->
+        <view class='item-divider'></view>
+        <!-- 上课标签 -->
+        <text class='item-tag'>上课中</text>
+        <text wx:if='{{item.lessons.length == 0}}' class='item-class-tx item-class-tx-no'>暂无</text>
+        <view wx:else class='list-row item-list-lesson'>
+          <block wx:for="{{item.lessons}}"  wx:key="id">
+            <template is="lessonsView" data="{{item}}"/>
+          </block>
+        </view>
+      </view>
+    </view>
+  </template>
+
+  <template name='lessonsView'>
+    <text class='item-class-tx item-class-tx-has'>{{item.classname}}({{item.teachername}})</text>
+  </template>
+</view>

@@ -1,0 +1,250 @@
+/* pages/lesson/lessonWall/lessonWall.wxss */
+.list-margin{
+  margin-bottom: 128rpx;
+}
+
+.warning{
+  height: 86rpx;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #f4e0b0;
+}
+
+.warning-icon{
+  height: 45rpx;
+  width: 50rpx;
+  margin-left: 30rpx;
+}
+
+.warning-text{
+ color: #222222;
+ font-size: 28rpx;
+ margin-left: 22rpx;
+}
+
+.bottom-view{
+  position: fixed;
+  width: 100%;
+  height: 128rpx;
+  bottom: 0;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.delegate-layout{
+  width: 750rpx;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40rpx;
+}
+
+.delegate-card{
+  width: 328rpx;
+  height: 236rpx;
+}
+
+.delegate-card-image{
+  position: absolute;
+  border-top-left-radius: 24rpx;
+  border-top-right-radius: 24rpx;
+  width: 328rpx;
+  height: 236rpx;
+}
+
+.delegate-gender{
+  position: absolute;
+  width: 106rpx;
+  height: 82rpx;
+  margin-left: 222rpx;
+}
+
+.delegate-info{
+  position: absolute;
+  width: 323rpx;
+  height: 238rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-end; 
+}
+
+.delegate-info-line{
+  width: 100%;
+  height: 62rpx;
+}
+
+.delegate-info-line-image{
+  position: absolute;
+  width: 100%;
+  height: 62rpx;
+}
+
+.delegate-info-line-text{
+  position: absolute;
+  width: 100%;
+  height: 62rpx;
+  flex-direction: row;
+  display: flex;
+  align-items:center;
+}
+
+.delegate-no{
+  color: white;
+  font-size: 24rpx;
+  margin-left: 20rpx;
+}
+
+.delegate-name{
+  color: white;
+  font-size: 28rpx;
+  flex-grow: 1;
+  margin-left: 16rpx;
+}
+
+.delegate-hr{
+  color: white;
+  font-size: 32px;
+  margin-right: 8rpx;
+}
+
+.item{
+  width: 100%;
+  height: 177rpx;
+  display: block;
+}
+
+
+.item-image{
+  width: 100%;
+  height: 177rpx;
+  position: absolute;
+}
+
+.item-row{
+  position: absolute;
+  width: 100%;
+  height: 177rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.item-avatar{
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: 48rpx;
+  margin-left: 60rpx;
+}
+
+
+.avatar-base{
+  width: 116rpx;
+  height: 116rpx;
+  margin-left: 60rpx;
+}
+
+.avatar-bg{
+  width: 116rpx;
+  height: 116rpx;
+  position: absolute;
+}
+
+.avatar{
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: 48rpx;
+  position: absolute;
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+}
+
+.item-info{
+  flex-grow: 1;
+  margin-left: 32rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.item-line{
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.item-no{
+  font-size: 24rpx;
+  color: #222222;
+}
+
+.item-name{
+  font-size: 28rpx;
+  color: #222222;
+  margin-left: 4rpx;
+}
+
+.item-hr-name{
+  font-size: 24rpx;
+  color: #222222;
+}
+
+.item-hr-value{
+  font-size: 46rpx;
+  margin-left: 14rpx;
+}
+
+.tx-bpm-low{
+  color: #A0A7BF;
+}
+
+.tx-bpm-target{
+  color:#4A6BE3;
+}
+
+.tx-bpm-high{
+  color: #E94242;
+}
+
+.item-look{
+  width: 180rpx;
+  height: 50rpx;
+  margin-right: 60rpx;
+}
+
+/* 班级一览 */
+.button-clazz{
+  width: 236rpx;
+  padding-top: 18rpx;
+  padding-bottom: 18rpx;
+  color: #ff4612;
+  border-radius: 35rpx;
+  font-size: 30rpx;
+  text-align: center;
+  border: solid 3rpx  #ff4612;
+}
+
+/** 班级动作 */
+.button-action{
+  width: 236rpx;
+  padding-top: 18rpx;
+  padding-bottom: 18rpx;
+  color: #fff;
+  border-radius: 35rpx;
+  background-color: #ff4612;
+  font-size: 30rpx;
+  text-align: center;
+}
+
+.bottom-blank{
+  width: 100%;
+  height: 140rpx;
+}
+

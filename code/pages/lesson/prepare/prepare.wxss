@@ -1,0 +1,82 @@
+/* pages/lesson/prepare/prepare.wxss */
+.text-normal{
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #222222;
+}
+
+.prepare-card{
+  width: 100%;
+  height: 161rpx;
+  display: block;
+}
+
+.prepare-card-img{
+  position: absolute;
+  width: 100%;
+  height: 161rpx;
+}
+
+.prepare-card-row{
+  position: absolute;
+  width: 100%;
+  height: 161rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.prepare-card-row-name{
+  width: 220rpx;
+  margin-left: 60rpx;
+}
+
+.prepare-card-row-value{
+  flex-grow: 1;
+}
+
+.value-stu{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.avatar-base{
+  width: 76rpx;
+  height: 76rpx;
+  margin-right:35rpx;
+}
+
+.avatar-bg{
+  width: 76rpx;
+  height: 76rpx;
+  position: absolute;
+}
+
+.avatar{
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 32rpx;
+  position: absolute;
+  margin-top: 6rpx;
+  margin-left: 6rpx;
+}
+
+.value-null{
+  font-size: 32rpx;
+  color:#cccccc;
+}
+
+value-text{
+  width: 220rpx;
+}
+
+.button-margin{
+  margin-top: 60rpx;
+}
+
+.prepare-card-row-icon{
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 60rpx;
+}

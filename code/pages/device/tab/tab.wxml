@@ -1,0 +1,24 @@
+<!--pages/device/tab/tab.wxml-->
+<view class="container">
+  <view class='list'>
+      <block wx:for="{{hubGroups}}"  wx:key="id">
+        <template is="hubGroupsView" data="{{item}}"/>
+      </block>
+  </view>
+
+  <template name="hubGroupsView">
+    <view class="item" bindtap='clickGroupItem' hover="true" hover-class="layout-hover" data-obj="{{item}}">
+      <image class='item-image' src="/assets/img/bg_item_list_devicegroup.png"></image>
+      <!-- 布局 -->
+      <view class='item-row'>
+        <view class='item-row-left'>
+          <!-- 名称 -->
+          <text class='item-name'>运动场所 ：{{item.name}}</text>
+          <!-- HUB数量 -->
+          <text class='item-count'>Hub数量 ：{{item.console_count}}</text>
+        </view>
+        <image class='icon-arrow' src='/assets/img/ic_arrow.png'></image>
+      </view>
+    </view>
+  </template>
+</view>

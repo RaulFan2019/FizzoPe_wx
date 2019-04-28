@@ -1,0 +1,54 @@
+<!--pages/report/lesson/lesson.wxml-->
+<view class='container'>
+  <!-- 图表页面 -->
+  <view class='card card-chart'>
+    <view class='chart-title'>
+      <view class='chart-title-icon'></view>
+      <text class='chart-title-text'>班级平均心率数据走势图</text>
+    </view>
+
+    <view class='chart-chart'>
+      <view class='chart-container'>
+        <ec-canvas class='ec-canvas' id="mychart-dom-line" canvas-id="mychart-line" ec="{{ec}}"></ec-canvas>
+      </view>
+    </view>
+  </view>
+
+  <view class='card card-sport'>
+    <view class='block-line'>
+      <view class='sport-block'>
+        <view class='sport-block-value-line'>
+          <text class='sport-block-value'>{{density}}</text>
+          <text class='sport-block-per'>%</text>
+        </view>
+        <view class='sport-block-name'>平均密度</view>
+      </view>
+      <view class='sport-divider'></view>
+      <view class='sport-block'>
+        <view class='sport-block-value-line'>
+          <text class='sport-block-value'>{{resthrIntensity}}</text>
+        </view>
+        <view class='sport-block-name'>平均强度</view>
+      </view>
+    </view>
+    <view class='block-line'>
+      <view class='sport-block'>
+        <view class='sport-block-value-line'>
+          <text class='sport-block-value'>{{alertTimes}}</text>
+        </view>
+        <view class='sport-block-name'>报警次数</view>
+      </view>
+      <view class='sport-divider'></view>
+      <view class='sport-block'>
+        <view class='sport-block-value-line'>
+          <text class='sport-block-value'>{{avg_bpm}}</text>
+        </view>
+        <view class='sport-block-name'>平均心率</view>
+      </view>
+    </view>
+  </view>
+
+  <view class='.botoom-logo-view'>
+    <image class='.bottom-logo-image' src='/assets/img/ic_logo_bottom.png'></image>
+  </view>
+</view>

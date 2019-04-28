@@ -1,0 +1,67 @@
+/* pages/device/hubGroupDetail/hubGroupDetail.wxss */
+.item{
+  width: 100%;
+  height: 241rpx;
+  display: block;
+}
+
+.item-image{
+  position: absolute;
+  width: 100%;
+  height: 241rpx;
+}
+
+.item-row{
+  position: absolute;
+  width: 100%;
+  height: 241rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.item-row-left{
+  flex-grow: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  box-sizing: border-box;
+  padding-left: 60rpx;
+}
+
+/** 名称 */
+.item-name{
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #222222;
+}
+
+/* 唯一编码 */
+.item-count{
+  font-size:28rpx;
+  color: #cccccc; 
+  margin-top: 10rpx;
+}
+
+/* 设备状态 */
+.item-state{
+  width: 120rpx;
+  margin-right: 60rpx;
+  border-radius: 25rpx;
+  font-size: 28rpx;
+  text-align: center;
+  padding-top: 8rpx;
+  padding-bottom: 8rpx;
+}
+
+.state-online{
+  color: #222222;
+  border: solid 3rpx  #222222;
+}
+
+.state-offline{
+  color: #ff4612;
+  border: solid 3rpx  #ff4612;
+}

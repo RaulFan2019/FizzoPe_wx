@@ -1,0 +1,19 @@
+<!--pages/report/selectStu/selectstu.wxml-->
+<view class='container'>
+  <view class='list-row'>
+    <block wx:for="{{students}}" wx:key="id">
+      <template is="studentsView" data="{{item}}" />
+    </block>
+  </view>
+
+  <btn-big class="button-margin" confirmText="完成" bind:confirmEvent="onFinishBtnClick"></btn-big>
+  
+  <template name="studentsView">
+    <view class='item' bindtap='clickstudentsItem' data-obj="{{item}}">
+      <view wx:if="{{item.selected}}" class='tx select'>
+      {{item.studentnumber<10? '0'+item.studentnumber:item.studentnumber}}{{item.nickname}}</view>
+      <view wx:else class='tx normal'>
+      {{item.studentnumber<10? '0'+item.studentnumber:item.studentnumber}}{{item.nickname}}</view>
+    </view>
+  </template>
+</view>

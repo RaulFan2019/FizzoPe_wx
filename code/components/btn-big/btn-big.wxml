@@ -1,0 +1,5 @@
+<!--components/btn-big/btn-big.wxml-->
+<view class='btn-big' hover="true" hover-class="btn-hover" catchtap='_confirmEvent'>
+  <image class='img' src='/assets/img/btn_big.png' mode='widthFix'></image>
+  <view class='tx'>{{confirmText}}</view>
+</view>

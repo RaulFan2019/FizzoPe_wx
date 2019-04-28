@@ -1,0 +1,45 @@
+<!--pages/lesson/tab/tab.wxml-->
+<view class="container">
+  <view class='list'>
+      <block wx:for="{{classes}}"  wx:key="id">
+        <template is="moverView" data="{{item}}"/>
+      </block>
+  </view>
+
+  <!-- 小贴士 -->
+  <view class='tip-title'>
+    <image class='tip-title-icon' src='/assets/img/ic_tip.png'></image>
+    <text class='tip-title-text'>浏览小贴士</text>
+  </view>
+  <text class='tip-msg'>亲爱滴,游客仅有浏览权限,管理员才可操作哟～</text>
+
+  <template name="moverView">
+    <view class="item" bindtap='clickClassItem' hover="true" hover-class="layout-hover" data-obj="{{item}}">
+      <image class='item-image' src="/assets/img/bg_item_list_lessons.png"></image>
+      <!-- 布局 -->
+      <view class='item-row'>
+        <view class='item-row-left'>
+          <view class='lesson-info'>
+            <!-- 班级名称 -->
+            <text class='lesson-info-name'>{{item.name}}</text>
+            <!-- 上课状态 -->
+            <text wx:if="{{item.lessonreminder == 1}}" class='lesson-info-state'>准备上课</text>
+            <text wx:elif="{{item.lessonreminder == 2}}" class='lesson-info-state'>已开始{{item.lessonstartedminutes}}分钟</text>
+            <text wx:else class='lesson-info-state'>未上课</text>
+          </view>
+          <!-- 上课时间 -->
+          <view class='lesson-time'>
+            <image class='lesson-time-icon' src='/assets/img/ic_lesson_starttime.png'></image>
+            <text wx:if="{{item.lessonreminder == 2}}" class='lesson-time-text'>上课时间:({{item.lessonteachername}}){{item .lessonstartformattime}}</text>
+            <text wx:else class='lesson-time-text'>未开始</text>
+          </view>
+        </view>
+        <view class='item-row-right'>
+          <text wx:if="{{item.lessonreminder == 0}}" class='lesson-action action-on'>{{item.ation}}</text>
+          <text wx:elif="{{(item.myId == item.lessonteacherid)}}" class='lesson-action action-on'>{{item.ation}}</text>
+          <text wx:else class='lesson-action action-off'>{{item.ation}}</text>
+        </view>
+      </view>
+    </view>
+  </template>
+</view>

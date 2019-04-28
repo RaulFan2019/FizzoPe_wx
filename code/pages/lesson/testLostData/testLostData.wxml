@@ -1,0 +1,18 @@
+<!--pages/lesson/testLostData/testLostData.wxml-->
+<!--pages/device/tab/tab.wxml-->
+<view class="container">
+  <view class='list'>
+      <block wx:for="{{attendances}}"  wx:key="id">
+        <template is="attendancesView" data="{{item}}"/>
+      </block>
+  </view>
+
+  <template name="attendancesView">
+    <view class="item" bindtap='clickGroupItem'data-obj="{{item}}">
+      <!-- 布局 -->
+      <view class='item-row'>
+        <text class='item-text'>{{item}}</text>
+      </view>
+    </view>
+  </template>
+</view>

@@ -1,0 +1,48 @@
+<!--pages/lesson/prepareHrPackage/prepareHrPackage.wxml-->
+<view class="container">
+  <view class='list'>
+    <block wx:for="{{hrPackages}}" wx:key="id">
+      <template is="hrPackagesView" data="{{item}}" />
+    </block>
+  </view>
+
+  <btn-big class="button-margin" confirmText="完成" bind:confirmEvent="onFinishBtnClick"></btn-big>
+
+  <view class='.botoom-logo-view'>
+    <image class='.bottom-logo-image' src='/assets/img/ic_logo_bottom.png'></image>
+  </view>
+
+  <template name="hrPackagesView">
+    <view class="item" hover="true" hover-class="layout-hover" bindtap='clickPackageItem' data-obj="{{item}}">
+      <image class='item-image' src="/assets/img/bg_item_list_hrpackage.png"></image>
+      <!-- 布局 -->
+      <view class='item-row'>
+        <view class='item-row-left'>
+          <view class='package-info'>
+            <!-- 手环包名称 -->
+            <text class='package-info-name'>{{item.name}}</text>
+            <!-- 使用状态 -->
+            <text wx:if="{{item.lessonid != 0}}" class='package-info-state'>已使用</text>
+            <text wx:else class='package-info-state'>未使用</text>
+          </view>
+
+          <view class='package-detail'>
+            <!-- 上课老师 -->
+            <image class='icon-teacher' src='/assets/img/ic_package_teacher.png'></image>
+            <text wx:if="{{item.lessonid == 0}}" class='package-detail-text detail-text-teacher'>上课老师:暂无</text>
+            <text wx:else class='package-detail-text detail-text-teacher'>上课老师:{{item.lessonteachername}}</text>
+            <!-- 上课班级 -->
+            <image class='icon-teacher' src='/assets/img/ic_package_clazz.png'></image>
+            <text wx:if="{{item.lessonid == 0}}" class='package-detail-text detail-text-clazz'>所在班级:暂无</text>
+            <text wx:else class='package-detail-text detail-text-clazz'>所在班级:{{item.lessonclassname}}</text>
+          </view>
+
+        </view>
+        <view class='item-row-right'>
+          <image wx:if="{{(item.lessonid == 0) && item.selected}}" class='icon-arrow' src='/assets/img/ic_selected.png'></image>
+          <image wx:if="{{(item.lessonid == 0) && !item.selected}}" class='icon-arrow' src='/assets/img/ic_un_selected.png'></image>
+        </view>
+      </view>
+    </view>
+  </template>
+</view>

@@ -1,0 +1,80 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": false,
+		"minified": false,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.94",
+	"appid": "wxe5d881a9b82dab89",
+	"projectname": "FIZZO%E4%BD%93%E8%82%B2%E8%AF%BE2.0",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 5,
+			"list": [
+				{
+					"id": -1,
+					"name": "schoolId=456",
+					"pathName": "pages/lesson/tab/tab",
+					"query": "schoolId=456",
+					"scene": 1048
+				},
+				{
+					"id": -1,
+					"name": "schoolId=456",
+					"pathName": "pages/launch/launch",
+					"query": "schoolId=456",
+					"scene": 1048
+				},
+				{
+					"id": -1,
+					"name": "school=456",
+					"pathName": "pages/launch/launch",
+					"query": "school=456",
+					"scene": 1048
+				},
+				{
+					"id": -1,
+					"name": "school=456",
+					"pathName": "pages/lesson/tab/tab",
+					"query": "school=456",
+					"scene": 1048
+				},
+				{
+					"id": -1,
+					"name": "school=456",
+					"pathName": "pages/launch/launch",
+					"query": "school=456",
+					"scene": 1048
+				},
+				{
+					"id": -1,
+					"name": "school=456",
+					"pathName": "pages/launch/launch",
+					"query": "school=456",
+					"scene": 1048
+				}
+			]
+		}
+	}
+}

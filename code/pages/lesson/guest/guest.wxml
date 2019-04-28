@@ -1,0 +1,21 @@
+<!--pages/lesson/guest/guest.wxml-->
+<view class='container'>
+
+
+  <view class='input-line'>
+    <view class='input-code-view'>
+      <input type="text" class="input-code" placeholder-style='color: #cccccc' placeholder="请输入观课验证码"
+        bindinput="codeChanged"></input>
+    </view>
+    <text class='input-btn' bindtap='inputCode'>确认</text>
+  </view>
+
+
+  <!-- 小贴士 -->
+  <view class='tip-title'>
+    <image class='tip-title-icon' src='/assets/img/ic_tip.png'></image>
+    <text class='tip-title-text'>温馨提示</text>
+  </view>
+  <text class='tip-msg'>如无邀请码，可询问现场工作人员</text>
+
+</view>

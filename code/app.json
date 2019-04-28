@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/lesson/guest/guest",
+    "pages/lesson/tab/tab",
+    "pages/lesson/prepare/prepare",
+    "pages/lesson/prepareConsoleGroup/prepareConsoleGroup",
+    "pages/lesson/prepareDuration/prepareDuration",
+    "pages/lesson/prepareHrPackage/prepareHrPackage",
+    "pages/lesson/prepareStu/prepareStu",
+    "pages/lesson/lessonWall/lessonWall",
+    "pages/lesson/stuDetail/stuDetail",
+    "pages/lesson/clazzDetail/clazzDetail",
+    "pages/lesson/stuTimer/stuTimer",
+    "pages/report/tab/tab",
+    "pages/report/lesson/lesson",
+    "pages/device/tab/tab",
+    "pages/device/hubGroupDetail/hubGroupDetail",
+    "pages/device/hubMap/hubMap",
+    "pages/lesson/testLostData/testLostData",
+    "pages/report/lesson2/lesson2",
+    "pages/report/selectStu/selectstu"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2b2a30",
+    "navigationBarTitleText": "第五区运动科技",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#EFEFF4",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#7F8389",
+    "selectedColor": "#FF4612",
+    "backgroundColor": "#FFF",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/lesson/tab/tab",
+        "text": "课程",
+        "iconPath": "assets/img/ic_tab_lesson.png",
+        "selectedIconPath": "assets/img/ic_tab_lesson_on.png"
+      },
+      {
+        "pagePath": "pages/report/tab/tab",
+        "text": "报告",
+        "iconPath": "assets/img/ic_tab_report.png",
+        "selectedIconPath": "assets/img/ic_tab_report_on.png"
+      },
+      {
+        "pagePath": "pages/device/tab/tab",
+        "text": "设备",
+        "iconPath": "assets/img/ic_tab_device.png",
+        "selectedIconPath": "assets/img/ic_tab_device_on.png"
+      }
+    ]
+  }
+}

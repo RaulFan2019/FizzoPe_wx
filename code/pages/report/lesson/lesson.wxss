@@ -1,0 +1,189 @@
+/* pages/report/lesson/lesson.wxss */
+ec-canvas {
+  width: 694rpx;
+  height: 460rpx;
+  margin-top: 50rpx;
+}
+
+.card{
+  background-color: #fff;
+  border-radius: 30rpx;
+  width: 694rpx;
+  margin-top: 30rpx;
+}
+
+.card-chart{
+  height: 460rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-title{
+  display: flex;
+  flex-direction: row;
+  margin-top: 40rpx;
+  margin-left: 32rpx;
+}
+
+.chart-title-icon{
+  background-color: #ff4612;
+  width: 6rpx;
+  height: 30rpx;
+  border-radius: 3rpx;
+}
+
+.chart-title-text{
+  font-size: 28rpx;
+  color: #222222;
+  margin-left: 20rpx;
+}
+
+.chart-chart{
+  flex-grow: 1;
+  width: 100%;
+}
+
+.chart-container{
+  position: absolute;
+  height: 330rpx;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+/* 运动区间 **/
+.card-sport{
+  height: 300rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.block-line{
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.sport-block{
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sport-divider{
+  background-color: #e0e0e0;
+  width: 1rpx;
+  height: 78rpx;
+}
+
+.sport-block-value-line{
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.sport-block-value{
+  font-size: 46rpx;
+  color: #ff4612;
+}
+
+.sport-block-per{
+  font-size: 24rpx;
+  color: #ff4612;
+}
+
+.sport-block-name{
+  font-size: 24rpx;
+  color: #666666;
+}
+
+.tab{
+	display: flex;
+	flex-direction: column;
+}
+.tab-nav{
+	height: 80rpx;
+	background: #fff;
+	border-bottom: 0.5rpx dotted #ddd;
+	display: flex;
+	line-height: 79rpx;
+	position: relative;
+}
+ 
+.tab-line{
+	position: absolute;
+	left: 0;
+	bottom: -1rpx;
+	height: 4rpx;
+	background: #f7982a;
+	transition: all 0.3s;
+}
+.tab-content{
+	flex: 1;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.ip_tab_comtainer {
+    width: 100%;
+    background-color: #F5F5F5;
+    padding: 20rpx 0 0;
+    white-space: nowrap;
+}
+
+.ip_tab_comtainer_padd {
+    display: inline-block;
+    width: 24rpx;
+}
+
+.ip_tab_item_s {
+    display: inline-block;
+    line-height: 40rpx;
+    padding: 12rpx 32rpx;
+    color: #ED373D;
+    margin-right: 8rpx;
+    margin-left: 8rpx;
+    font-size: 28rpx;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: #ffffff;
+    border-radius: 4rpx;
+    border: 1px solid #ED373D;
+}
+
+.ip_tab_item_n {
+    display: inline-block;
+    padding: 12rpx 32rpx;
+    line-height: 40rpx;
+    color: #353535;
+    margin-right: 8rpx;
+    background-color: #ffffff;
+    margin-left: 8rpx;
+    font-size: 28rpx;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-radius: 4rpx;
+    border: 1px solid #CCCCCC;
+}
+
+/**
+去除横向滚动条
+*/
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+}

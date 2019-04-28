@@ -1,0 +1,77 @@
+/* pages/report/tab/tab.wxss */
+.item{
+  width: 100%;
+  height: 213rpx;
+  display: block;
+}
+
+.item-image{
+  position: absolute;
+  width: 100%;
+  height: 213rpx;
+}
+
+.item-row{
+  position: absolute;
+  width: 100%;
+  height: 213rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.item-row-left{
+  flex-grow: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  box-sizing: border-box;
+  padding-left: 60rpx;
+}
+
+.lesson-info{
+  display: flex;
+  flex-direction: row;
+}
+
+.lesson-info-name{
+  color: #222222;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.lesson-info-teacher{
+  color: #cccccc;
+  font-size: 28rpx;
+}
+
+.lesson-time{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20rpx;
+}
+
+.lesson-time-icon{
+  width: 28rpx;
+  height: 30rpx;
+}
+
+.lesson-time-text{
+  font-size: 24rpx;
+  color: #cccccc;
+  margin-left: 10rpx;
+}
+
+.item-look{
+  width: 180rpx;
+  margin-right: 60rpx;
+  border-radius: 25rpx;
+  font-size: 28rpx;
+  text-align: center;
+  padding-top: 8rpx;
+  padding-bottom: 8rpx;
+  color: #ff4612;
+  border: solid 3rpx  #ff4612;
+}

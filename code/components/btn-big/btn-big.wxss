@@ -1,0 +1,28 @@
+/* components/btn-big/btn-big.wxss */
+
+.btn-big {
+  width: 718rpx;
+  height: 143rpx;
+  display: block;
+}
+
+.btn-big .img{
+  width: 718rpx;
+  height: 143rpx;
+  position: absolute;
+}
+
+.btn-big .tx{
+  color: white;
+  font-size: 36rpx;
+  width: 718rpx;
+  height: 143rpx;
+  text-align: center;
+  position: absolute;
+  margin-top: 35rpx;
+}
+
+.btn-hover {
+  opacity: 0.9;
+  transform: scale(0.95, 0.95); /*缩放*/
+}

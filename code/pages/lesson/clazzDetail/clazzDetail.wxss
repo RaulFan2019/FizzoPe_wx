@@ -1,0 +1,196 @@
+/* pages/lesson/clazzDetail/clazzDetail.wxss */
+ec-canvas {
+  width: 694rpx;
+  height: 460rpx;
+  margin-top: 360rpx;
+}
+
+.delegate-layout{
+  width: 750rpx;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40rpx;
+}
+
+.delegate-card{
+  width: 328rpx;
+  height: 236rpx;
+}
+
+.delegate-card-image{
+  position: absolute;
+  border-top-left-radius: 24rpx;
+  border-top-right-radius: 24rpx;
+  width: 328rpx;
+  height: 236rpx;
+}
+
+.delegate-gender{
+  position: absolute;
+  width: 106rpx;
+  height: 82rpx;
+  margin-left: 222rpx;
+}
+
+.delegate-info{
+  position: absolute;
+  width: 323rpx;
+  height: 238rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-end; 
+}
+
+.delegate-info-line{
+  width: 100%;
+  height: 62rpx;
+}
+
+.delegate-info-line-image{
+  position: absolute;
+  width: 100%;
+  height: 62rpx;
+}
+
+.delegate-info-line-text{
+  position: absolute;
+  width: 100%;
+  height: 62rpx;
+  flex-direction: row;
+  display: flex;
+  align-items:center;
+}
+
+.delegate-no{
+  color: white;
+  font-size: 24rpx;
+  margin-left: 20rpx;
+}
+
+.delegate-name{
+  color: white;
+  font-size: 28rpx;
+  flex-grow: 1;
+  margin-left: 16rpx;
+}
+
+.delegate-hr{
+  color: white;
+  font-size: 32px;
+  margin-right: 8rpx;
+}
+
+.card{
+  background-color: #fff;
+  border-radius: 30rpx;
+  width: 694rpx;
+  margin-top: 30rpx;
+}
+
+.card-chart{
+  height: 560rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-title{
+  display: flex;
+  flex-direction: row;
+  margin-top: 40rpx;
+  margin-left: 32rpx;
+}
+
+.chart-title-icon{
+  background-color: #ff4612;
+  width: 6rpx;
+  height: 30rpx;
+  border-radius: 3rpx;
+}
+
+.chart-title-text{
+  font-size: 28rpx;
+  color: #222222;
+  margin-left: 20rpx;
+}
+
+.chart-chart{
+  flex-grow: 1;
+  width: 100%;
+}
+
+.chart-container{
+  position: absolute;
+  height: 330rpx;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.chart-bottom-view{
+  height: 138rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.chart-block{
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.chart-block-value{
+  color: #222222;
+  font-size: 46rpx;
+}
+
+.chart-block-name{
+  color: #666666;
+  font-size: 24rpx;
+}
+
+/* 运动区间 **/
+.card-sport{
+  height: 136rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.sport-block{
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sport-block-value-line{
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.sport-block-value{
+  font-size: 46rpx;
+  color: #ff4612;
+}
+
+.sport-block-per{
+  font-size: 24rpx;
+  color: #ff4612;
+}
+
+.sport-block-name{
+  font-size: 24rpx;
+  color: #666666;
+}

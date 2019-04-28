@@ -1,0 +1,30 @@
+<!--pages/lesson/prepareDuration/prepareDuration.wxml-->
+<view class="container">
+  <view class='list'>
+      <block wx:for="{{durations}}"  wx:key="id">
+        <template is="durationsView" data="{{item}}"/>
+      </block>
+  </view>
+
+  <btn-big class="button-margin" confirmText="完成" bind:confirmEvent="onFinishBtnClick"></btn-big>
+
+  <view class='.botoom-logo-view'>
+    <image class='.bottom-logo-image' src='/assets/img/ic_logo_bottom.png'></image>
+  </view>
+  
+  <template name="durationsView">
+    <view class="item" hover="true" hover-class="layout-hover" bindtap='clickItem'data-obj="{{item}}">
+      <image class='item-image' src="/assets/img/bg_item_list_duration.png"></image>
+      <!-- 布局 -->
+      <view class='item-row'>
+        
+        <text class='item-duration'>{{item.duration/60}}分钟</text>
+
+        <image wx:if="{{item.selected}}" class='icon-arrow' src='/assets/img/ic_selected.png'></image>
+        <image wx:if="{{!item.selected}}" class='icon-arrow' src='/assets/img/ic_un_selected.png'></image>
+        
+      </view>
+    </view>
+  </template>
+
+</view>

@@ -1,0 +1,105 @@
+/* pages/lesson/prepareHrPackage/prepareHrPackage.wxss */
+.item{
+  width: 100%;
+  height: 224rpx;
+  display: block;
+}
+
+.item-image{
+  position: absolute;
+  width: 100%;
+  height: 213rpx;
+}
+
+.item-row{
+  position: absolute;
+  width: 100%;
+  height: 224rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+}
+
+.item-row-left{
+  flex-grow: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  box-sizing: border-box;
+  padding-left: 60rpx;
+}
+
+.item-row-right{
+  width: 72rpx;
+  height: 100%;
+  display: flex;
+  margin-right: 30rpx;
+  flex-direction: column;
+  justify-content:center;
+}
+
+.package-info{
+  display: flex;
+  flex-direction: row;
+}
+
+.package-info-name{
+  color: #222222;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.package-info-state{
+  color: #f2612f;
+  font-size: 24rpx;
+  border-color: #f2612f;
+  border-radius: 8rpx;
+  border-width: 3rpx;
+  border-style: solid;
+  margin-left: 20rpx;
+  padding-left: 15rpx;
+  padding-right: 15rpx;
+  padding-top: 4rpx;
+  padding-bottom: 4rpx;
+}
+
+.package-detail{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20rpx;
+  align-items: center;
+}
+
+.package-detail-text{
+  margin-left: 10rpx;
+  color: #cccccc;
+  font-size: 24rpx;
+}
+
+.detail-text-teacher{
+  width: 220rpx;
+}
+
+.detail-text-clazz{
+  width: 250rpx;
+}
+
+.icon-teacher{
+  width: 27rpx;
+  height: 25rpx;
+}
+
+.icon-clazz{
+  width: 27rpx;
+  height: 26rpx;
+}
+
+.icon-arrow{
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.button-margin{
+  margin-top: 60rpx;
+}
+

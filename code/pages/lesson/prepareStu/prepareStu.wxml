@@ -1,0 +1,48 @@
+<!--pages/lesson/prepareStu/prepareStu.wxml-->
+<view class="container">
+  <!-- 搜索框 -->
+  <view class='search-bar'>
+    <view class='search-bar-form'>
+      <view class='search-bar-box'>
+        <icon class="search-bar-icon-search" type="search" size="14"></icon>
+        <input type="text" class="search-bar-input" placeholder-style='color: #cccccc'  placeholder="请输入姓名或学号" value="{{search}}" bindinput="searchInput"/>
+        <view class="search-bar-icon-clear" wx:if="{{search.length > 0}}" bindtap="wxSearchClear">
+          <icon type="clear" size="14"></icon>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 学生列表 -->
+  <view class='list-row list-stu'>
+      <block wx:for="{{showList}}"  wx:key="id">
+        <template is="studentView" data="{{item}}"/>
+      </block>
+  </view>
+
+  <btn-big class="button-margin" confirmText="完成" bind:confirmEvent="onFinishBtnClick"></btn-big>
+
+  <view class='.botoom-logo-view'>
+    <image class='.bottom-logo-image' src='/assets/img/ic_logo_bottom.png'></image>
+  </view>
+
+  <template name="studentView">
+    <view class="item" hover="true" hover-class="layout-hover" bindtap='clickstudentsItem'data-obj="{{item}}">
+      <!-- 用户头像 -->
+      <image class='item-image' src="{{item.avatar || userDefault.avatar}}" mode='aspectFill'></image>
+      <!-- 布局 -->
+      <view class='item-info'>
+        <view class='item-info-line'>
+          <image class='item-info-line-image' src='/assets/img/bg_prepare_stu_info.png'></image>
+          <view class='item-info-line-text'>
+            <text class='info-no'>{{item.no}} / </text>
+            <text class='info-name'>{{item.nickname}}</text>
+            <image wx:if="{{item.selected}}" class='icon-arrow' src='/assets/img/ic_selected.png'></image>
+            <image wx:if="{{!item.selected}}" class='icon-arrow' src='/assets/img/ic_un_selected.png'></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </template>
+
+</view>

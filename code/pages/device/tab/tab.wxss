@@ -1,0 +1,61 @@
+/* pages/device/tab/tab.wxss */
+.item{
+  width: 100%;
+  height: 206rpx;
+  display: block;
+}
+
+.item-image{
+  position: absolute;
+  width: 100%;
+  height: 206rpx;
+}
+
+.item-row{
+  position: absolute;
+  width: 100%;
+  height: 206rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.item-row-left{
+  flex-grow: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  box-sizing: border-box;
+  padding-left: 60rpx;
+}
+
+.item-row-right{
+  width: 200rpx;
+  height: 100%;
+  display: flex;
+  margin-right: 30rpx;
+  flex-direction: column;
+  justify-content:center;
+}
+
+/** 名称 */
+.item-name{
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #222222;
+}
+
+/* 数量 */
+.item-count{
+  font-size:28rpx;
+  color: #cccccc; 
+  margin-top: 20rpx;
+}
+
+.icon-arrow{
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 60rpx;
+}

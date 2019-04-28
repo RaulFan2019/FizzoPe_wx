@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "btn-big": "/components/btn-big/btn-big"
+  }
+}

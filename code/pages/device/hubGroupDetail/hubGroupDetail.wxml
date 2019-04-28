@@ -1,0 +1,32 @@
+<!--pages/device/hubGroupDetail/hubGroupDetail.wxml-->
+<view class="container">
+  <view class='list'>
+      <block wx:for="{{hubs}}"  wx:key="id">
+        <template is="hubsView" data="{{item}}"/>
+      </block>
+  </view>
+
+  <view class='.botoom-logo-view'>
+    <image class='.bottom-logo-image' src='/assets/img/ic_logo_bottom.png'></image>
+  </view>
+
+  <template name="hubsView">
+    <view class="item" data-obj="{{item}}">
+      <image class='item-image' src="/assets/img/bg_item_list_devicedetail.png"></image>
+      <!-- 布局 -->
+      <view class='item-row'>
+        <view class='item-row-left'>
+          <!-- 设备号 -->
+          <text class='item-name'>设备号 ：{{item.name}}</text>
+          <!-- 唯一编码 -->
+          <view wx:if='{item.type == 1}' class='item-count'>周围手环：{{item.antsn_count}}个</view>
+          <view wx:if='{item.type == 2}' class='item-count'>MAC地址：{{item.mac_addr}}</view>
+
+          <view wx:if='{item.type == 1}' class='item-count'>版本号 ：{{item.versionname}}</view>
+        </view>
+        <view wx:if="{{item.online == 1}}" class='item-state state-online'>在线</view>
+        <view wx:else class='item-state state-offline'>离线</view>
+      </view>
+    </view>
+  </template>
+</view>

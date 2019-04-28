@@ -1,0 +1,94 @@
+<view class='container'>
+  <ec-canvas class='ec-canvas-power' id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ecPower}}"></ec-canvas>
+  <ec-canvas class='ec-canvas-hr' id="mychart-dom-line" canvas-id="mychart-line" ec="{{ecHr}}"></ec-canvas>
+  
+  <!-- 横向滑动TAB -->
+  <scroll-view scroll-x="true" class="tab-scroll" 
+    scroll-left="{{(showtab> 3) ? (showtab - 3) * 150: 0}}">
+    <!-- tab -->
+    <view class="tab">
+      <view class="tab-nav">
+        <view wx:for="{{students}}" wx:key="id" bindtap="setTab" data-tabindex="{{index}}" class='tab-content'>
+          {{item.studentnumber
+          <10? '0'+item.studentnumber:item.studentnumber}}{{item.nickname}}</view>
+            <view>
+              <view class="tab-line" style="width:{{100/tabnum}}%;transform:translateX({{100*showtab}}%);"></view>
+            </view>
+        </view>
+      </view>
+  </scroll-view>
+  <view class='all' bindtap='clickAll'>全部</view>
+  <view class='card card-summary'>
+    <view class='line'>
+      <view class='item'>
+        <view class='value'>{{lessonInfo.avg_bpm}}</view>
+        <view class='tag'>班级平均心率</view>
+      </view>
+      <view class='divider'></view>
+      <view class='item'>
+        <view class='value'>{{lessonInfo.density}}%</view>
+        <view class='tag'>平均密度</view>
+      </view>
+      <view class='divider'></view>
+      <view class='item'>
+        <view class='value'>{{lessonInfo.resthr_intensity}}</view>
+        <view class='tag'>平均强度</view>
+      </view>
+      <view class='divider'></view>
+      <view class='item'>
+        <view class='value'>{{lessonInfo.alert_times}}</view>
+        <view class='tag'>告警次数</view>
+      </view>
+    </view>
+
+    <view class='line'>
+      <view class='item'>
+        <view class='value'>{{lessonInfo.subject_density}}%</view>
+        <view class='tag'>主题密度</view>
+      </view>
+      <view class='divider'></view>
+      <view class='item'>
+        <view class='value'>{{stuInfo.avg_bpm}}</view>
+        <view class='tag'>{{stuInfo.studentnumber}}号平均心率</view>
+      </view>
+      <view class='divider'></view>
+      <view class='item'>
+        <view class='value'>{{stuInfo.density}}%</view>
+        <view class='tag'>{{stuInfo.studentnumber}}号平均密度</view>
+      </view>
+      <view class='divider'></view>
+      <view class='item'>
+        <view class='value'>{{stuInfo.resthr_intensity}}</view>
+        <view class='tag'>{{stuInfo.studentnumber}}号平均强度</view>
+      </view>
+    </view>
+  </view>
+
+  <view class='card card-chart'>
+    <view class='title'>
+      <view class='sign'></view>
+      <view class='tx'>平均强度分布图</view>
+      <image class='legend' src='/assets/img/ic_report_chart_legend.png'></image>
+    </view>
+
+    <!-- <view class='chart-chart'>
+      <view class='chart-container'>
+        
+      </view>
+    </view> -->
+  </view>
+
+  <view class='card card-chart'>
+    <view class='title'>
+      <view class='sign'></view>
+      <view class='tx'>平均心率趋势图</view>
+      <image class='legend' src='/assets/img/ic_report_chart_legend.png'></image>
+    </view>
+
+    <!-- <view class='chart-chart'>
+      <view class='chart-container'>
+        <ec-canvas class='ec-canvas' id="mychart-dom-line" canvas-id="mychart-line" ec="{{ec}}"></ec-canvas>
+      </view>
+    </view> -->
+  </view>
+  </view>

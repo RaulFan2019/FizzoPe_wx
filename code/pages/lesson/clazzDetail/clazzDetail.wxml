@@ -1,0 +1,96 @@
+<!--pages/lesson/clazzDetail/clazzDetail.wxml-->
+<view class='container'>
+  <!-- 学生代表 -->
+  <view class='delegate-layout'>
+    <!-- 男生 -->
+    <view class='delegate-card'>
+      <image class='delegate-card-image' src='{{clazzData.boy.avatar || userDefault.avatar}}' mode='aspectFill'></image>
+      <image class='delegate-gender' src='/assets/img/ic_delegate_gender_boy.png' ></image>
+      <view class='delegate-info'>
+        <view class='delegate-info-line'>
+          <image class='delegate-info-line-image' src='/assets/img/bg_prepare_stu_info.png'></image>
+          <view class='delegate-info-line-text'>
+            <text wx:if="{{clazzData.boy.studentnumber < 10}}" class='delegate-no'>00{{clazzData.boy.studentnumber}} / </text>
+            <text wx:elif="{{clazzData.boy.studentnumber < 100}}" class='delegate-no'>0{{clazzData.boy.studentnumber}} / </text>
+            <text wx:else class='delegate-no'>{{clazzData.boy.studentnumber}}</text>
+            <text class='delegate-name'>{{clazzData.boy.nickname}}</text>
+            <text class='delegate-hr'>{{clazzData.boy.bpm}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 女生 -->
+    <view class='delegate-card'>
+      <image class='delegate-card-image' src='{{clazzData.girl.avatar || userDefault.avatar}}' mode='aspectFill'></image>
+      <image class='delegate-gender' src='/assets/img/ic_delegate_gender_girl.png' ></image>
+      <view class='delegate-info'>
+        <view class='delegate-info-line'>
+          <image class='delegate-info-line-image' src='/assets/img/bg_prepare_stu_info.png'></image>
+          <view class='delegate-info-line-text'>
+            <text wx:if="{{clazzData.girl.studentnumber < 10}}" class='delegate-no'>00{{clazzData.girl.studentnumber}} / </text>
+            <text wx:elif="{{clazzData.girl.studentnumber < 100}}" class='delegate-no'>0{{clazzData.girl.studentnumber}} / </text>
+            <text wx:else class='delegate-no'>{{clazzData.girl.studentnumber}}</text>
+            <text class='delegate-name'>{{clazzData.girl.nickname}}</text>
+            <text class='delegate-hr'>{{clazzData.girl.bpm}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  
+
+  <!-- 图表页面 -->
+  <view class='card card-chart'>
+    <view class='chart-title'>
+      <view class='chart-title-icon'></view>
+      <text class='chart-title-text'>班级心率趋势图</text>
+    </view>
+
+    <view class='chart-chart'>
+      <view class='chart-container'>
+        <ec-canvas class='ec-canvas' id="mychart-dom-line" canvas-id="mychart-line" ec="{{ec}}"></ec-canvas>
+      </view>
+    </view>
+    <view class='chart-bottom-view'>
+      <view class='.chart-block'>
+        <text class='chart-block-value'>{{clazzData.boy.avg_bpm}}</text>
+        <text class='chart-block-name'>1号代表平均心率</text>
+      </view>
+      <view class='.chart-block'>
+        <text class='chart-block-value'>{{clazzData.girl.avg_bpm}}</text>
+        <text class='chart-block-name'>2号代表平均心率</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 运动数据 -->
+  <view class='card card-sport'>
+    <view class='sport-block'>
+      <view class='sport-block-value-line'>
+        <text class='sport-block-value'>{{clazzData.boy.resthr_intensity}}</text>
+      </view>
+      <text class='sport-block-name'>1号代表平均强度</text>
+    </view>
+    <view class='sport-divider'></view>
+    <view class='sport-block'>
+      <view class='sport-block-value-line'>
+        <text class='sport-block-value'>{{clazzData.girl.resthr_intensity}}</text>
+      </view>
+      <text class='sport-block-name'>2号代表平均强度</text>
+    </view>
+    <view class='sport-divider'></view>
+    <view class='sport-block'>
+      <view class='sport-block-value-line'>
+        <text class='sport-block-value'>{{clazzData.density}}</text>
+        <text class='sport-block-per'>%</text>
+      </view>
+      <text class='sport-block-name'>平均密度</text>
+    </view>
+  </view>
+
+  <view class='.botoom-logo-view'>
+    <image class='.bottom-logo-image' src='/assets/img/ic_logo_bottom.png'></image>
+  </view>
+
+</view>

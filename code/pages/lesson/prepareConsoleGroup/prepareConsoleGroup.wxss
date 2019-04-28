@@ -1,0 +1,166 @@
+/* pages/lesson/prepareConsoleGroup/prepareConsoleGroup.wxss */
+.item{
+  width: 100%;
+  height: 352rpx;
+  display: block;
+}
+
+.item-image{
+  position: absolute;
+  width: 100%;
+  height: 352rpx;
+}
+
+.item-row{
+  position: absolute;
+  width: 100%;
+  height: 352rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-row-top{
+  display: flex;
+  flex-direction: row;
+  margin-top: 56rpx;
+}
+
+.item-name{
+  width: 587rpx;
+  color: #222222;
+  font-size: 32rpx;
+  margin-left: 60rpx;
+  font-weight: bold;
+}
+
+.item-divider{
+  width: 617rpx;
+  height: 2rpx;
+  margin-left: 60rpx;
+  margin-top: 26rpx;
+  background-color: #e0e0e0;
+}
+
+.item-tag{
+  color: #f2612f;
+  width: 80rpx;
+  font-size: 24rpx;
+  border-color: #f2612f;
+  border-radius: 8rpx;
+  border-width: 3rpx;
+  border-style: solid;
+  margin-left: 60rpx;
+  margin-top: 34rpx;
+  padding-left: 12rpx;
+  padding-right: 12rpx;
+  padding-top: 4rpx;
+  padding-bottom: 4rpx;
+}
+
+.item-list-lesson{
+  width: 618rpx;
+  padding-left: 60rpx;
+  margin-top: 28rpx;
+}
+
+.item-class-tx{
+  color: #999999;
+  font-size: 28rpx;
+}
+
+.item-class-tx-has{
+  width: 306rpx;
+}
+
+.item-class-tx-no{
+  margin-left: 60rpx;
+  margin-top: 28rpx;
+}
+
+.item-row-bottom{
+  display: flex;
+  flex-direction: row;
+  margin-left: 30rpx;
+  margin-top: 28rpx;
+}
+
+.item-screen{
+  width: 189rpx;
+  height: 152rpx;
+  margin-left: 30rpx;
+}
+
+.sreen-image{
+  position: absolute;
+  width: 189rpx;
+  height: 152rpx;
+}
+
+.screen-info{
+  position: absolute;
+  width: 189rpx;
+  height: 152rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-line{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20rpx;
+  margin-left: 18rpx;
+  align-items: center;
+}
+
+.icon-teacher{
+  width: 27rpx;
+  height: 25rpx;
+}
+
+.icon-clazz{
+  width: 27rpx;
+  height: 26rpx;
+}
+
+.info-line-text{
+  margin-left: 10rpx;
+  color: #fff;
+  font-size: 24rpx;
+}
+
+.icon-arrow{
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.more-info{
+  position: absolute;
+  width: 189rpx;
+  height: 152rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.more-line{
+  display: flex;
+  flex: row;
+  align-items: baseline;
+  margin-bottom: 4rpx;
+}
+
+.more-number{
+  font-size: 50rpx;
+  color: #fff;
+  margin-right: 4rpx;
+}
+
+.more-text{
+  font-size: 20rpx;
+  color: #fff;
+}
+
+.button-margin{
+  margin-top: 60rpx;
+}

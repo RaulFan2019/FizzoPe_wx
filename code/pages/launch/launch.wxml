@@ -1,0 +1,8 @@
+<view class='container'>
+  <image class='logo' open-type="getUserInfo" src="/assets/img/ic_logo.png"></image>
+
+  <button class='launch-btn button-big' hidden='{{shouquan}}' bindgetuserinfo="userInfoHandler"
+     open-type="getUserInfo">需要您的授权</button>
+
+  <view class='launch-tip' hidden='{{!shouquan}}'>{{loginMsg}}</view>
+</view>

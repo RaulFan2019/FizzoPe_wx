@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "ec-canvas": "../../../ec-canvas/ec-canvas",
+    "btn-big": "/components/btn-big/btn-big"
+    
+  }
+}
